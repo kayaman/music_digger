@@ -1,0 +1,37 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "Music Digger",
+            "intents": [
+                {
+                    "name": "StartArtistSearch",
+                    "slots": [
+                        {
+                            "name": "ArtistName",
+                            "type": "AMAZON.LITERAL"
+                        }
+                    ],
+                    "samples": [
+                        "look for {Queen|ArtistName}",
+                        "look for {Rolling Stones|ArtistName}"
+                    ]
+                },
+                {
+                    "name": "SetInformationKind",
+                    "slots": [
+                        {
+                            "name": "InformationKind",
+                            "type": "AMAZON.LITERAL"
+                        }
+                    ],
+                    "samples": [
+                        "{albums|InformationKind}",
+                        "{related artists|InformationKind}",
+                        "{top tracks|InformationKind}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
