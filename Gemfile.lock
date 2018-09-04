@@ -1,0 +1,28 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    alexa_verifier (1.0.0)
+    dotenv (2.5.0)
+    mustermann (1.0.3)
+    rack (2.0.5)
+    rack-protection (2.0.3)
+      rack
+    ralyxa (1.8.0)
+      alexa_verifier (~> 1.0)
+    sinatra (2.0.3)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.3)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  ralyxa
+  sinatra
+
+BUNDLED WITH
+   1.16.4
