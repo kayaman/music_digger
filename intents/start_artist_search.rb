@@ -1,11 +1,14 @@
+require File.expand_path('../spotify', __FILE__)
+
 intent 'StartArtistSearch' do
   artist_name = request.slot_value('ArtistName')
 
-  # TODO: Spotify search for artist by name
+  artist = Spotify.new.search(artist_name)
 
   response_text = [
-    "Okay then! I see #{artist_name} is about rock and roll! ",
-    "What kind of information would you like?"
+    "Okay then! I see #{artist[:name]} is about #{artist[:genre]}! ",
+    "#{artist[:name]} has #{artist[:followers]} on Spotify. ",
+    "What else would you like to know?"
   ].join
 
   ask(response_text, session_attributes: { ArtistName: artist_name })

@@ -1,8 +1,19 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.2.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
     alexa_verifier (1.0.0)
-    dotenv (2.5.0)
+    concurrent-ruby (1.0.5)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
+    i18n (1.1.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
+    multipart-post (2.0.0)
     mustermann (1.0.3)
     rack (2.0.5)
     rack-protection (2.0.3)
@@ -14,13 +25,17 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.3)
       tilt (~> 2.0)
+    thread_safe (0.3.6)
     tilt (2.0.8)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv
+  activesupport
+  faraday
   ralyxa
   sinatra
 
